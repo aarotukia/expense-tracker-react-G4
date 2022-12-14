@@ -9,8 +9,9 @@ const AddExpense = () => {
       <form>
         <div className="form-control">
           <label htmlFor="text">Fueling information</label>
-          <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="the distance driven with the refueling in kilometers" />
           <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="name of the car that was refueled" />
+          <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="distance driven with the refueling in kilometers" />
+        
         </div>
         <div className="form-control">
           <label htmlFor="amount"
