@@ -3,13 +3,19 @@ import { GlobalContext } from '../context/GlobalState';
 const TotalExpenses = () => {
   const { transactions } = useContext(GlobalContext);
 
+
   /* map through amounts and add them up to show total expenses*/
   const amounts = transactions.map(transaction => transaction.amount);
   const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
 
-  /* add up total liters   */
-  const totalLiterAmount = transactions.map(transaction => transaction.liters);
+  /* filter out transactions with empty liters */
+  const transactionsWithLiters = transactions.filter(transaction => transaction.liters);
+
+
+  /* add up total liters */
+  const totalLiterAmount = transactionsWithLiters.map(transaction => transaction.liters);
   const totalLiters = totalLiterAmount.reduce((acc, item) => (acc += item), 0).toFixed(2);
+
 
   /* Calculate average expense per 100 km */
   const totalDistanceAmount = transactions.map(transaction => transaction.distance);
@@ -19,11 +25,11 @@ const TotalExpenses = () => {
 
   const totalAmount = transactions.map(transaction => transaction.amount);
   const totalEuroAmount = totalAmount.reduce((acc, item) => (acc += item), 0).toFixed(2);
-  
-  const averageExpenses = (totalDistance / totalEuroAmount).toFixed(2);
+
+  const averageExpenses = (totalEuroAmount / totalDistance).toFixed(2);
 
   /* Calculate average consumption per 100 km */
-  const averageConsumption = (totalDistance / totalLiters).toFixed(2);
+  const averageConsumption = (totalLiters / totalDistance).toFixed(2);
 
 
 
@@ -37,10 +43,10 @@ const TotalExpenses = () => {
       <h4> Total liters </h4>
       <h1> {totalLiters} L</h1>
 
-      <h4> Avg Expenses / 100 kilometers </h4>
-      <h1> {averageExpenses} Euro</h1>
+      <h4> Avg Expenses Euro / 100 kilometers </h4>
+      <h1> {averageExpenses}</h1>
 
-      <h4> Avg consumption / 100 kilometers </h4>
+      <h4> Avg consumption Liter / 100 kilometers </h4>
       <h1> {averageConsumption} liters</h1>
 
 

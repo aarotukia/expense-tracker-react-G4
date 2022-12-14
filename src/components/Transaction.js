@@ -3,12 +3,20 @@ import { GlobalContext } from '../context/GlobalState';
 
 const Transaction = ({ transaction }) => {
   const { deleteTransaction } = useContext(GlobalContext);
+  var eLiter = 0;
 
   return (
     <li className="minus">
-      {/*   Display name, cost of refuel and amount of liters fueled */}
-      {transaction.text} <span>-{transaction.amount}€ ({transaction.liters} Liters)</span><button className="delete-btn" onClick={() => deleteTransaction(transaction.id)}>x</button>
-
+      {transaction.text}
+      {/* check if the transaction has a "liters" property */}
+      {transaction.liters ? (
+        // if it has a "liters" property, display the amount and liters
+        <span>-{transaction.amount}€ ({transaction.liters} Liters)</span>
+      ) : (
+        // if it doesn't have a "liters" property, just display the amount
+        <span>-{transaction.amount}€ (Electric car)</span>
+      )}
+      <button className="delete-btn" onClick={() => deleteTransaction(transaction.id)}>x</button>
     </li>
   )
 }
