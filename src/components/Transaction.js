@@ -3,7 +3,6 @@ import { GlobalContext } from '../context/GlobalState';
 
 const Transaction = ({ transaction }) => {
   const { deleteTransaction } = useContext(GlobalContext);
-  var eLiter = 0;
 
   return (
     <li className="minus">
@@ -17,6 +16,7 @@ const Transaction = ({ transaction }) => {
         <span>-{transaction.amount}€ (Electric car)</span>
       )}
       <button className="delete-btn" onClick={() => deleteTransaction(transaction.id)}>x</button>
+      
     </li>
   )
 }

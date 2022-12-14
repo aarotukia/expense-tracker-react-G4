@@ -19,8 +19,14 @@ body {
 }
 
 .container {
-  margin: 30px auto;
-  width: 450px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-side,
+.right-side {
+  width: 50%;
+  margin: 0 40px;
 }
 
 h1 {
@@ -142,6 +148,17 @@ input[type='number'] {
   left: 0;
   transform: translate(-100%, -50%);
   opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.spesif-btn {
+  cursor: pointer;
+  background-color: blue;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  top: 50%;
   transition: opacity 0.3s ease;
 }
 

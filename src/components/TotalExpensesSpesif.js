@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import { GlobalContext } from '../context/GlobalState';
-const TotalExpenses = () => {
-  const { transactions } = useContext(GlobalContext);
+import {  GlobalContextSpesif} from '../context/GlobalState';
+const TotalExpensesSpesif = () => {
+  const { transactions } = useContext(GlobalContextSpesif);
 
 
   /* map through amounts and add them up to show total expenses*/
@@ -29,7 +29,7 @@ const TotalExpenses = () => {
   const averageExpenses = (totalEuroAmount / totalDistance).toFixed(2);
 
   /* Calculate average consumption per 100 km */
-  const averageConsumption = (totalLiters / totalDistance*100).toFixed(2);
+  const averageConsumption = (totalLiters / totalDistance).toFixed(2);
 
 
 
@@ -37,7 +37,7 @@ const TotalExpenses = () => {
   return (
     <div>
 
-      <h4> Total Expenses </h4>
+      <h4> Total Expenses by car</h4>
       <h1> {total}€</h1>
 
       <h4> Total liters </h4>
@@ -55,4 +55,4 @@ const TotalExpenses = () => {
   )
 }
 
-export default TotalExpenses
+export default TotalExpensesSpesif
