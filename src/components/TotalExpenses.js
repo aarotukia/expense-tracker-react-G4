@@ -38,7 +38,7 @@ const TotalExpenses = () => {
       <h1> {totalLiters} L</h1>
 
       <h4> Avg Expenses / 100 kilometers </h4>
-      <h1> {averageExpenses} km</h1>
+      <h1> {averageExpenses} Euro</h1>
 
       <h4> Avg consumption / 100 kilometers </h4>
       <h1> {averageConsumption} liters</h1>
