@@ -4,7 +4,7 @@ const TotalExpenses = () => {
   return (
     <div>
       <h4> Total Expenses </h4>
-      <h1> 10.00€</h1> 
+      <h1> 0.00€</h1> 
     </div>
   )
 }
