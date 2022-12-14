@@ -1,12 +1,34 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
+import { GlobalContext } from '../context/GlobalState';
 
 const AddExpense = () => {
     const [text, setText] = useState("");
     const [amount, setAmount] = useState();
+    const [qty, setQty] = useState();
+    const [dist, setDist] = useState();
+
+    const {addTransaction} = useContext(GlobalContext);
+
+    const onSubmit = e => {
+        e.preventDefault();
+
+        const newTransaction = {
+          /*   generating random id for new expenses */
+            id: Math.floor(Math.random() * 100000000),
+            
+            text,
+            amount,
+            qty,
+            dist
+
+
+        }
+        addTransaction(newTransaction);
+    }
   return (
     <>
        <h3>Add fueling information</h3>
-      <form>
+      <form onSubmit={onSubmit}>
         <div className="form-control">
           <label htmlFor="text">Fueling information</label>
           <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="name of the car that was refueled" />
@@ -17,8 +39,9 @@ const AddExpense = () => {
           <label htmlFor="amount"
             >Amount <br />
        </label>
-          <input type="number"value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Quantity of fueling in liters.." />
-          <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Distance driven with the refueling in kilometers" />
+          <input type="number"value={qty} onChange={(e) => setQty(e.target.value)} placeholder="Quantity of fueling in liters.." />
+          <input type="number" value={dist} onChange={(e) => setDist(e.target.value)} placeholder="Distance driven with the refueling in kilometers" />
+
           <input type="number"value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Price of the fueling...." />
         </div>
         <button className="btn">Add refueling expense</button>
