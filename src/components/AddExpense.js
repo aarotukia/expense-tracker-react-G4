@@ -18,7 +18,7 @@ const AddExpense = () => {
             >Amount <br />
        </label>
           <input type="number"value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Quantity of fueling in liters.." />
-          <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Distance driven with the refueling in kilometers" />
+          <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Distance driven with the refueling in kilometers" />
           <input type="number"value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Price of the fueling...." />
         </div>
         <button className="btn">Add refueling expense</button>
