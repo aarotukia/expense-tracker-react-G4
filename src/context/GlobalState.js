@@ -4,9 +4,7 @@ import AppReducer from "./AppReducer";
 
 const initialState = {
     transactions: [
-        {id: 1, text: "Mazda", amount: 70, liters: 40, distance: 105},
-        {id: 2, text: "Ferrari", amount: 150, liters: 30, distance: 90},
-        {id: 3, text: "Honda", amount: 45, liters: 25, distance: 92},
+
     ]
 }
 console.log(initialState)
