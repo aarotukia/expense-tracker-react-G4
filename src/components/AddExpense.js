@@ -4,8 +4,8 @@ import { GlobalContext } from '../context/GlobalState';
 const AddExpense = () => {
     const [text, setText] = useState("");
     const [amount, setAmount] = useState();
-    const [qty, setQty] = useState();
-    const [dist, setDist] = useState();
+    const [liters, setLiters] = useState();
+    const [distance, setDistance] = useState();
 
     const {addTransaction} = useContext(GlobalContext);
 
@@ -18,9 +18,8 @@ const AddExpense = () => {
 
             text,
             amount: +amount,
-            qty: +qty,
-            dist: +dist
-
+            liters: +liters,
+            distance: +distance
 
         }
         addTransaction(newTransaction);
@@ -39,10 +38,11 @@ const AddExpense = () => {
           <label htmlFor="amount"
             >Amount <br />
        </label>
-          <input type="number"value={qty} onChange={(e) => setQty(e.target.value)} placeholder="Quantity of fueling in liters.." />
-          <input type="number" value={dist} onChange={(e) => setDist(e.target.value)} placeholder="Distance driven with the refueling in kilometers" />
+       <input type="number"value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Price of the fueling...." />
+          <input type="number"value={liters} onChange={(e) => setLiters(e.target.value)} placeholder="Quantity of fueling in liters.." />
+          <input type="number" value={distance} onChange={(e) => setDistance(e.target.value)} placeholder="Distance driven with the refueling in kilometers" />
 
-          <input type="number"value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Price of the fueling...." />
+ 
         </div>
         <button className="btn">Add refueling expense</button>
       </form>

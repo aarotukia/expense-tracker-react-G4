@@ -9,16 +9,13 @@ const initialState = {
         {id: 3, text: "Honda", amount: 45, liters: 25, distance: 92},
     ]
 }
-
+console.log(initialState)
 
 /*  Create context  */
 export const GlobalContext = createContext(initialState);
 
 
 /* provider component  */
-
-
-
 export const GlobalProvider = ({ children }) => {
     const [state, dispatch] = useReducer(AppReducer, initialState);
 
@@ -34,7 +31,7 @@ function deleteTransaction(id) {
             type: "ADD_TRANSACTION",
             payload: transaction
         });
-
+        console.log(initialState)
 }
     return(<GlobalContext.Provider value={{
         transactions: state.transactions,
