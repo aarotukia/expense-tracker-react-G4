@@ -25,7 +25,6 @@ const AddExpense = () => {
 
     }
     addTransaction(newTransaction);
-    addTransactionSpesif(newTransaction);
   }
   return (
     <>

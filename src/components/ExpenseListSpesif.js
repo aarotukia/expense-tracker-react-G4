@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import {  GlobalContextSpesif} from '../context/GlobalState';
+import { GlobalContext } from '../context/GlobalState';
 import TransactionSpesif, { Transcation } from './TransactionSpesif';
 
 
 export const ExpenseListSpesif = () => {
 
-  const { transactions } = useContext(GlobalContextSpesif);
+  const { transactions } = useContext(GlobalContext);
   return (
     <>
       <h1>Total by cars</h1>
