@@ -4,17 +4,22 @@ import TotalExpenses  from './components/TotalExpenses';
 import ExpenseList from './components/ExpenseList';
 import AddExpense from './components/AddExpense';
 
+import { GlobalProvider} from "./context/GlobalState";
+
 function App() {
   return (
+    <GlobalProvider>
     <div>
      <Header />
      <div className="container">
        <TotalExpenses />
        <ExpenseList />
        <AddExpense />
+       
        </div>
- <p> hello testing testing</p>
+   
     </div>
+    </GlobalProvider>
   );
 }
 

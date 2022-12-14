@@ -2,9 +2,9 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <h2>
+    <h1>
       Expense-tracker-react-G4
-    </h2>
+    </h1>
   )
 }
 
