@@ -11,7 +11,7 @@ const Transaction = ({ transaction }) => {
   const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
 
   /* filter out transactions with SpesifText */
-  const transactionsWithSpesifText = transactions.filter(transaction => transaction.text == "asd");
+  const transactionsWithSpesifText = transactions.filter(transaction => transaction.text === "asd");
 
   /* filter out transactions with empty liters */
   const transactionsWithLiters = transactions.filter(transaction => transaction.liters);

@@ -4,6 +4,7 @@ const TotalExpensesSpesif = () => {
   const { transactions } = useContext(GlobalContextSpesif);
 
 
+
   /* map through amounts and add them up to show total expenses*/
   const amounts = transactions.map(transaction => transaction.amount);
   const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
@@ -32,6 +33,27 @@ const TotalExpensesSpesif = () => {
   const averageConsumption = (totalLiters / totalDistance).toFixed(2);
 
 
+  const transactionGroups = {};
+  
+  for (const transaction of transactions) {
+    if (!transactionGroups[transaction.text]) {
+      transactionGroups[transaction.text] = {
+        amountSum: 0,
+        litersSum: 0,
+        distanceSum: 0,
+      };
+    }
+    
+    transactionGroups[transaction.text].amountSum += transaction.amount;
+    transactionGroups[transaction.text].litersSum += transaction.liters;
+    transactionGroups[transaction.text].distanceSum += transaction.distance;
+  }
+  
+  var summedAmounts = transactionGroups.amountSum;
+  var summedLiters = transactionGroups.litersSum;
+  var summedDistance = transactionGroups.distanceSum;
+
+  
 
 
   return (
