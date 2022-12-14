@@ -13,24 +13,28 @@ const TotalExpenses = () => {
     const totalLiters = totalLiterAmount.reduce((acc, item) => (acc += item), 0).toFixed(2);
 
     /* Calculate average expense per 100 km */
-    
-    /* tulee tähän */
+    const totalDistance = transactions.map(transaction => transaction.distance);
+    const distPer100 = totalDistance.reduce((acc, item) => (acc += item), 0)
+    /* tällä hetkellä laskee total distancen  */
+
+     /* Calculate average consumption per 100 km */
+
+     
 
   return (
     <div>
 
-
       <h4> Total Expenses </h4>
-      <h1> {total}€</h1> 
-
+      <h1> {total}€</h1>
 
       <h4> Total liters </h4>
       <h1> {totalLiters} L</h1>
 
       <h4> Avg Expenses / 100 kilometers </h4>
-      <h1> avg €</h1>
+      <h1> {distPer100} km</h1>
 
-
+      <h4> Avg consumption / 100 kilometers </h4>
+      <h1> {distPer100} km</h1>
 
     </div>
     

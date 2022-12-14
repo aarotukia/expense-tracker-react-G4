@@ -10,7 +10,7 @@ const AddExpense = () => {
         <div className="form-control">
           <label htmlFor="text">Fueling information</label>
           <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="name of the car that was refueled" />
-          <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="distance driven with the refueling in kilometers" />
+       
         
         </div>
         <div className="form-control">
@@ -18,6 +18,7 @@ const AddExpense = () => {
             >Amount <br />
        </label>
           <input type="number"value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Quantity of fueling in liters.." />
+          <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Distance driven with the refueling in kilometers" />
           <input type="number"value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Price of the fueling...." />
         </div>
         <button className="btn">Add refueling expense</button>
