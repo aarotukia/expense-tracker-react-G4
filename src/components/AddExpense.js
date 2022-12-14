@@ -19,7 +19,7 @@ const AddExpense = () => {
           <input type="number"value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Quantity of fueling in liters.." />
           <input type="number"value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Price of the fueling...." />
         </div>
-        <button className="btn">Add expenses</button>
+        <button className="btn">Add refueling expense</button>
       </form>
     </>
   )
