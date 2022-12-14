@@ -12,9 +12,14 @@ const TotalExpenses = () => {
   const totalLiters = totalLiterAmount.reduce((acc, item) => (acc += item), 0).toFixed(2);
 
   /* Calculate average expense per 100 km */
-  const totalDistance = transactions.map(transaction => transaction.distance);
+  const totalDistanceAmount = transactions.map(transaction => transaction.distance);
+  const totalDistance = totalDistanceAmount.reduce((acc, item) => (acc += item), 0).toFixed(2);
+
+
+
   const totalAmount = transactions.map(transaction => transaction.amount);
   const totalEuroAmount = totalAmount.reduce((acc, item) => (acc += item), 0).toFixed(2);
+  
   const averageExpenses = (totalDistance / totalEuroAmount).toFixed(2);
 
   /* Calculate average consumption per 100 km */
