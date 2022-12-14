@@ -60,7 +60,7 @@ const Transaction = ({ transaction }) => {
   var summedLiters =  transactionGroups[transaction.text].litersSum;
   var summedDistance = transactionGroups[transaction.text].distanceSum;
 
-  var AverageSummedExpenses = (summedAmounts / summedDistance).toFixed(2)
+  var AverageSummedExpenses = (summedAmounts / summedDistance*100).toFixed(2)
   var AverageSummedConsumption = (summedLiters / summedDistance*100).toFixed(2)
 
   
@@ -80,7 +80,7 @@ const Transaction = ({ transaction }) => {
       <h1> {summedDistance} KM</h1>
 
       <h4> Avg Expenses Euro / 100 kilometers </h4>
-      <h1> {AverageSummedExpenses}</h1>
+      <h1> {AverageSummedExpenses}€</h1>
 
       <h4> Avg consumption Liter / 100 kilometers </h4>
       <h1> {AverageSummedConsumption} liters</h1>

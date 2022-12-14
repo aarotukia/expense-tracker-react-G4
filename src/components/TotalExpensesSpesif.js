@@ -27,10 +27,10 @@ const TotalExpensesSpesif = () => {
   const totalAmount = transactions.map(transaction => transaction.amount);
   const totalEuroAmount = totalAmount.reduce((acc, item) => (acc += item), 0).toFixed(2);
 
-  const averageExpenses = (totalEuroAmount / totalDistance).toFixed(2);
+  const averageExpenses = (totalEuroAmount / totalDistance*100).toFixed(2);
 
   /* Calculate average consumption per 100 km */
-  const averageConsumption = (totalLiters / totalDistance).toFixed(2);
+  const averageConsumption = (totalLiters / totalDistance*100).toFixed(2);
 
 
   const transactionGroups = {};
