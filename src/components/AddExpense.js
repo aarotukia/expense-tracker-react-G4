@@ -6,7 +6,6 @@ const AddExpense = () => {
   const [amount, setAmount] = useState();
   const [liters, setLiters] = useState();
   const [distance, setDistance] = useState();
-
   const { addTransaction } = useContext(GlobalContext);
 
   const onSubmit = e => {
