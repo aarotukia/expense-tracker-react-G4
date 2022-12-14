@@ -15,11 +15,11 @@ const AddExpense = () => {
         const newTransaction = {
           /*   generating random id for new expenses */
             id: Math.floor(Math.random() * 100000000),
-            
+
             text,
-            amount,
-            qty,
-            dist
+            amount: +amount,
+            qty: +qty,
+            dist: +dist
 
 
         }
