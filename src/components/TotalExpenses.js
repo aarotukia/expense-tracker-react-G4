@@ -36,7 +36,7 @@ const TotalExpenses = () => {
 
   return (
     <div>
-
+    <h1>Total by ALL cars</h1> <br /> 
       <h4> Total Expenses </h4>
       <h1> {total}€</h1>
 

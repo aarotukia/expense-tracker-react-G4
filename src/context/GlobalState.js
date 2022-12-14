@@ -10,10 +10,6 @@ const initialState = {
 }
 const initialStateSpesif = {
     transactions: [     
-        {id: 73402376, text: "asd", amount: 13, liters: 123, distance: 123},
-        {id: 123123, text: "afasfasd", amount: 13, liters: 123, distance: 123},
-        {id: 7341231231402376, text: "asdas", amount: 13, liters: 123, distance: 123},
-        {id: 7341231231402376, text: "asd", amount: 13, liters: 123, distance: 123},
 
     ]
     
