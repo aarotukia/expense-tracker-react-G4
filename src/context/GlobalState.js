@@ -5,10 +5,8 @@ import AppReducer from "./AppReducer";
 const initialState = {
     transactions: [
 
-    ]
-    
+    ]   
 }
-console.log(initialState)
 
 /*  Create context  */
 export const GlobalContext = createContext(initialState);
@@ -31,9 +29,7 @@ export const GlobalProvider = ({ children }) => {
             payload: transaction
         });
     }
-    state.transactions.forEach(transaction => {
-        console.log(transaction);
-      });
+
     return (<GlobalContext.Provider value={{
         transactions: state.transactions,
         deleteTransaction,
