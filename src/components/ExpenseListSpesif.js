@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
-import TransactionSpesif, { Transcation } from './TransactionSpesif';
+import TransactionSpesif from './TransactionSpesif';
 
 export const ExpenseListSpesif = () => {
   const { transactions } = useContext(GlobalContext);
@@ -26,7 +26,7 @@ export const ExpenseListSpesif = () => {
       <br></br>
       {Object.entries(groupedTransactions).map(([text, transactions]) => (
         <>
-          <h4>{text}</h4>
+          <h2>{text}</h2>
           <ul>
             {transactions.map(transaction => (
               <TransactionSpesif key={transaction.id} transaction={transaction} />

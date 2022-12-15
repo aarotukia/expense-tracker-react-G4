@@ -33,6 +33,7 @@ const TotalExpensesSpesif = () => {
   const averageConsumption = (totalLiters / totalDistance*100).toFixed(2);
 
 
+/* loop through list of added cars and sum all the necessary information if the car name is the same  */
   const transactionGroups = {};
   
   for (const transaction of transactions) {
@@ -49,9 +50,7 @@ const TotalExpensesSpesif = () => {
     transactionGroups[transaction.text].distanceSum += transaction.distance;
   }
   
-  var summedAmounts = transactionGroups.amountSum;
-  var summedLiters = transactionGroups.litersSum;
-  var summedDistance = transactionGroups.distanceSum;
+
 
   
 

@@ -8,11 +8,11 @@ const TotalExpenses = () => {
   const amounts = transactions.map(transaction => transaction.amount);
   const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
 
-  /* filter out transactions with empty liters */
+  /* filter out transactions with empty liters to determine whether the car is electric or not*/
   const transactionsWithLiters = transactions.filter(transaction => transaction.liters);
 
 
-  /* add up total liters */
+  /* map through liters fueled and add up total liters */
   const totalLiterAmount = transactionsWithLiters.map(transaction => transaction.liters);
   const totalLiters = totalLiterAmount.reduce((acc, item) => (acc += item), 0).toFixed(2);
 
@@ -20,9 +20,6 @@ const TotalExpenses = () => {
   /* Calculate average expense per 100 km */
   const totalDistanceAmount = transactions.map(transaction => transaction.distance);
   const totalDistance = totalDistanceAmount.reduce((acc, item) => (acc += item), 0).toFixed(2);
-
-
-
   const totalAmount = transactions.map(transaction => transaction.amount);
   const totalEuroAmount = totalAmount.reduce((acc, item) => (acc += item), 0).toFixed(2);
 
@@ -33,7 +30,7 @@ const TotalExpenses = () => {
 
 
 
-
+/*  Display the calculated expenses and other infomation to the user */
   return (
     <div>
     <h1>Total by ALL cars</h1> <br /> 
