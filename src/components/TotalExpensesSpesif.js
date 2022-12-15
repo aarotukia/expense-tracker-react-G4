@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import {  GlobalContextSpesif} from '../context/GlobalState';
+import {  GlobalContext} from '../context/GlobalState';
 const TotalExpensesSpesif = () => {
-  const { transactions } = useContext(GlobalContextSpesif);
+  const { transactions } = useContext(GlobalContext);
 
 
 

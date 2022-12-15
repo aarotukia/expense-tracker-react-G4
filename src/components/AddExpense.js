@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { GlobalContext, GlobalContextSpesif} from '../context/GlobalState';
+import { GlobalContext} from '../context/GlobalState';
 
 const AddExpense = () => {
   const [text, setText] = useState("");
@@ -7,7 +7,6 @@ const AddExpense = () => {
   const [liters, setLiters] = useState();
   const [distance, setDistance] = useState();
   const { addTransaction } = useContext(GlobalContext);
-  const { addTransactionSpesif } = useContext(GlobalContextSpesif);
 
 
 

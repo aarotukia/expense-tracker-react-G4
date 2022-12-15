@@ -73,10 +73,10 @@ const Transaction = ({ transaction }) => {
       <h4> Total Expenses by car {summedText}</h4>
       <h1> {summedAmounts}€</h1>
 
-      <h4> Total liters of  {summedText}</h4>
+      <h4> Total liters used with {summedText}</h4>
       <h1> {summedLiters} L</h1>
 
-      <h4> Summed distance </h4>
+      <h4> Summed distance driven with {summedText}</h4>
       <h1> {summedDistance} KM</h1>
 
       <h4> Avg Expenses Euro / 100 kilometers </h4>

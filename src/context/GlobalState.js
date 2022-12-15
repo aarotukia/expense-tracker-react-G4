@@ -8,17 +8,10 @@ const initialState = {
     ]
     
 }
-const initialStateSpesif = {
-    transactions: [     
-
-    ]
-    
-}
 console.log(initialState)
 
 /*  Create context  */
 export const GlobalContext = createContext(initialState);
-export const GlobalContextSpesif = createContext(initialStateSpesif);
 
 
 /* provider component  */
